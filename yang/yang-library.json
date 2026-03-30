@@ -1,9 +1,9 @@
 {
-  "modules-state": {
+  "ietf-yang-library:modules-state": {
     "module-set-id": "",
     "module": [
       {
-        "name": "ietf-multicast",
+        "name": "ietf-test",
         "namespace": "urn:ietf:params:xml:ns:yang:ietf-multicast",
         "revision": "",
         "conformance-type": "implement",
