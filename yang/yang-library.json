@@ -3,8 +3,7 @@
     "module-set-id": "",
     "module": [
       {
-        "name": "multiast-service",
-        "namespace": "urn:ietf:params:xml:ns:yang:ietf-multicast",
+        "name": "ietf-multiast",
         "revision": "",
         "conformance-type": "implement",
         "feature": []		  
