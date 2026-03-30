@@ -3,8 +3,8 @@
     "module-set-id": "",
     "module": [
       {
-        "name": "ietf-multicast",
-        "namespace": "urn:ietf:params:xml:ns:yang:ietf-multicast",
+        "name": "iietf-crypto-types",
+        "namespace": "urn:ietf:params:xml:ns:yang:ietf-crypto-types",
         "revision": "",
         "conformance-type": "implement",
         "feature": []		  
