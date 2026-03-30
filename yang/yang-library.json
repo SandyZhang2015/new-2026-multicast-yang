@@ -4,7 +4,7 @@
     "module": [
       {
         "name": "ietf-multiast",
-        "revision": "",
+        "revision": "2026-01-06",
         "conformance-type": "implement",
         "feature": []		  
       }
