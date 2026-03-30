@@ -3,8 +3,8 @@
     "module-set-id": "",
     "module": [
       {
-        "name": "ietf-test",
-        "namespace": "urn:ietf:params:xml:ns:yang:ietf-test",
+        "name": "ietf-multicast",
+        "namespace": "urn:ietf:params:xml:ns:yang:ietf-multicast",
         "revision": "",
         "conformance-type": "implement",
         "feature": []		  
