@@ -3,7 +3,7 @@
     "module-set-id": "",
     "module": [
       {
-        "name": "iietf-crypto-types",
+        "name": "ietf-crypto-types",
         "namespace": "urn:ietf:params:xml:ns:yang:ietf-crypto-types",
         "revision": "",
         "conformance-type": "implement",
