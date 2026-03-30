@@ -3,7 +3,7 @@
     "module-set-id": "",
     "module": [
       {
-        "name": "ietf-multicast",
+        "name": "valid-ietf-multicast",
         "namespace": "urn:ietf:params:xml:ns:yang:ietf-multicast",
         "revision": "",
         "conformance-type": "implement",
