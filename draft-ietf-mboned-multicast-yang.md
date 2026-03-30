@@ -9,19 +9,19 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+area: "Operations and Management"
+workgroup: "MBONE Deployment"
 keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
+  group: "MBONE Deployment"
+  type: "Working Group"
+  mail: "mboned@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/mboned/"
+  github: "SandyZhang2015/new-2026-multicast-yang"
+  latest: "https://SandyZhang2015.github.io/new-2026-multicast-yang/draft-ietf-mboned-multicast-yang.html"
 
 author:
  -
