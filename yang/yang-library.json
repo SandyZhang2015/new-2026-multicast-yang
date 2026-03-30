@@ -1,10 +1,10 @@
 {
-  "ietf-yang-library:modules-state": {
+  "modules-state": {
     "module-set-id": "",
     "module": [
       {
-        "name": "ietf-rib-extension",
-        "namespace": "urn:ietf:params:xml:ns:yang:ietf-rib-extension",
+        "name": "ietf-multicast",
+        "namespace": "urn:ietf:params:xml:ns:yang:ietf-multicast",
         "revision": "",
         "conformance-type": "implement",
         "feature": []		  
