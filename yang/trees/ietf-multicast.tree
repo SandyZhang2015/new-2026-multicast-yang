@@ -1,0 +1,189 @@
+module: ietf-multicast
+  +--rw multicast-service
+     +--rw multicast-flow* [vpn-rd source-address group-address]
+        +--rw vpn-rd            rt-types:route-distinguisher
+        +--rw source-address    ip-multicast-source-address
+        +--rw group-address     rt-types:ip-multicast-group-address
+        +--rw upstream
+        |  +--rw neighbor* [neighbor-address]
+        |     +--rw neighbor-address    inet:ip-address
+        |     +--rw vni-type?           identityref
+        |     +--rw signaling?          identityref
+        |     +--rw (protocol-type)?
+        |        +--:(evpn)
+        |        +--:(mld)
+        |        +--:(mld-snooping)
+        |        +--:(mvpn)
+        |        +--:(pim)
+        +--rw downstream* [signaling transport]
+           +--rw signaling                   identityref
+           +--rw (protocol-type)?
+           |  +--:(evpn)
+           |  +--:(mld)
+           |  +--:(mld-snooping)
+           |  +--:(mvpn)
+           |  +--:(pim)
+           +--rw transport                   identityref
+           +--rw (transport-tech-type)?
+           |  +--:(bier) {bier}?
+           |  |  +--rw bier* [sub-domain]
+           |  |     +--rw sub-domain         uint16
+           |  |     +--rw tad* [mt-id fa-number data-plane]
+           |  |     |  +--rw mt-id         uint16
+           |  |     |  +--rw fa-number     uint8
+           |  |     |  +--rw data-plane    uint8
+           |  |     +--rw bitstringlength?   uint16
+           |  |     +--rw bier-encap-type?   identityref
+           |  +--:(bier-te) {bier-te}?
+           |  |  +--rw bitstring* [name]
+           |  |     +--rw name           string
+           |  |     +--rw bier-te-adj* [adj-id]
+           |  |        +--rw adj-id    uint16
+           |  +--:(mldp) {mldp}?
+           |  |  +--rw mt-id?                uint16
+           |  |  +--rw fa-number?            uint8
+           |  +--:(rsvp-te-p2mp) {p2mp-te}?
+           |  |  +--rw template-name?
+           |  |  |       te-types:te-template-name
+           |  |  +--rw static-tunnel-name?   string
+           |  +--:(pim) {pim}?
+           |  |  +--rw source-address?
+           |  |  |       ip-multicast-source-address
+           |  |  +--rw group-address
+           |  |  |       rt-types:ip-multicast-group-address
+           |  |  +--rw bidir {bidir}?
+           |  |  +--rw tad* [mt-id fa-number data-plane]
+           |  |     +--rw mt-id         uint16
+           |  |     +--rw fa-number     uint8
+           |  |     +--rw data-plane    uint8
+           |  +--:(ir-tunnel) {ir-tunnel}?
+           |  |  +--rw ir-tunnel-type?       uint8
+           |  +--:(sr-p2mp) {sr-p2mp}?
+           |  +--:(native)
+           +--rw neighbor* [neighbor-address]
+              +--rw neighbor-address    inet:ip-address
+              +--rw vni-type?           identityref
+
+  notifications:
+    +---n ingress-egress-event
+       +--ro event-type?       identityref
+       +--ro multicast-flow* [vpn-rd source-address group-address]
+          +--ro vpn-rd            rt-types:route-distinguisher
+          +--ro source-address    ip-multicast-source-address
+          +--ro group-address     rt-types:ip-multicast-group-address
+          +--ro upstream
+          |  +--ro neighbor* [neighbor-address]
+          |     +--ro neighbor-address    inet:ip-address
+          |     +--ro vni-type?           identityref
+          |     +--ro signaling?          identityref
+          |     +--ro (protocol-type)?
+          |        +--:(evpn)
+          |        +--:(mld)
+          |        +--:(mld-snooping)
+          |        +--:(mvpn)
+          |        +--:(pim)
+          +--ro downstream* [signaling transport]
+             +--ro signaling                   identityref
+             +--ro (protocol-type)?
+             |  +--:(evpn)
+             |  +--:(mld)
+             |  +--:(mld-snooping)
+             |  +--:(mvpn)
+             |  +--:(pim)
+             +--ro transport                   identityref
+             +--ro (transport-tech-type)?
+             |  +--:(bier) {bier}?
+             |  |  +--ro bier* [sub-domain]
+             |  |     +--ro sub-domain         uint16
+             |  |     +--ro tad* [mt-id fa-number data-plane]
+             |  |     |  +--ro mt-id         uint16
+             |  |     |  +--ro fa-number     uint8
+             |  |     |  +--ro data-plane    uint8
+             |  |     +--ro bitstringlength?   uint16
+             |  |     +--ro bier-encap-type?   identityref
+             |  +--:(bier-te) {bier-te}?
+             |  |  +--ro bitstring* [name]
+             |  |     +--ro name           string
+             |  |     +--ro bier-te-adj* [adj-id]
+             |  |        +--ro adj-id    uint16
+             |  +--:(mldp) {mldp}?
+             |  |  +--ro mt-id?                uint16
+             |  |  +--ro fa-number?            uint8
+             |  +--:(rsvp-te-p2mp) {p2mp-te}?
+             |  |  +--ro template-name?
+             |  |  |       te-types:te-template-name
+             |  |  +--ro static-tunnel-name?   string
+             |  +--:(pim) {pim}?
+             |  |  +--ro source-address?
+             |  |  |       ip-multicast-source-address
+             |  |  +--ro group-address
+             |  |  |       rt-types:ip-multicast-group-address
+             |  |  +--ro bidir {bidir}?
+             |  |  +--ro tad* [mt-id fa-number data-plane]
+             |  |     +--ro mt-id         uint16
+             |  |     +--ro fa-number     uint8
+             |  |     +--ro data-plane    uint8
+             |  +--:(ir-tunnel) {ir-tunnel}?
+             |  |  +--ro ir-tunnel-type?       uint8
+             |  +--:(sr-p2mp) {sr-p2mp}?
+             |  +--:(native)
+             +--ro neighbor* [neighbor-address]
+                +--ro neighbor-address    inet:ip-address
+                +--ro vni-type?           identityref
+
+  grouping general-multicast-key:
+    +-- vpn-rd?           rt-types:route-distinguisher
+    +-- source-address?   ip-multicast-source-address
+    +-- group-address     rt-types:ip-multicast-group-address
+  grouping bier-key:
+    +-- sub-domain?        uint16
+    +-- tad* [mt-id fa-number data-plane]
+    |  +-- mt-id         uint16
+    |  +-- fa-number     uint8
+    |  +-- data-plane    uint8
+    +-- bitstringlength?   uint16
+    +-- bier-encap-type?   identityref
+  grouping transport-tech:
+    +-- transport?                  identityref
+    +-- (transport-tech-type)?
+       +--:(bier) {bier}?
+       |  +-- bier* [sub-domain]
+       |     +-- sub-domain?        uint16
+       |     +-- tad* [mt-id fa-number data-plane]
+       |     |  +-- mt-id         uint16
+       |     |  +-- fa-number     uint8
+       |     |  +-- data-plane    uint8
+       |     +-- bitstringlength?   uint16
+       |     +-- bier-encap-type?   identityref
+       +--:(bier-te) {bier-te}?
+       |  +-- bitstring* [name]
+       |     +-- name           string
+       |     +-- bier-te-adj* [adj-id]
+       |        +-- adj-id    uint16
+       +--:(mldp) {mldp}?
+       |  +-- mt-id?                uint16
+       |  +-- fa-number?            uint8
+       +--:(rsvp-te-p2mp) {p2mp-te}?
+       |  +-- template-name?        te-types:te-template-name
+       |  +-- static-tunnel-name?   string
+       +--:(pim) {pim}?
+       |  +-- source-address?       ip-multicast-source-address
+       |  +-- group-address
+       |  |       rt-types:ip-multicast-group-address
+       |  +-- bidir {bidir}?
+       |  +-- tad* [mt-id fa-number data-plane]
+       |     +-- mt-id         uint16
+       |     +-- fa-number     uint8
+       |     +-- data-plane    uint8
+       +--:(ir-tunnel) {ir-tunnel}?
+       |  +-- ir-tunnel-type?       uint8
+       +--:(sr-p2mp) {sr-p2mp}?
+       +--:(native)
+  grouping signaling-tech:
+    +-- signaling?   identityref
+    +-- (protocol-type)?
+       +--:(evpn)
+       +--:(mld)
+       +--:(mld-snooping)
+       +--:(mvpn)
+       +--:(pim)
