@@ -62,7 +62,6 @@ module: ietf-multicast
            |  +--:(native)
            +--rw neighbor* [neighbor-address]
               +--rw neighbor-address    inet:ip-address
-              +--rw vni-type?           identityref
 
   notifications:
     +---n ingress-egress-event
@@ -129,7 +128,6 @@ module: ietf-multicast
              |  +--:(native)
              +--ro neighbor* [neighbor-address]
                 +--ro neighbor-address    inet:ip-address
-                +--ro vni-type?           identityref
 
   grouping general-multicast-key:
     +-- vpn-rd?           rt-types:route-distinguisher
