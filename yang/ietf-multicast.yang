@@ -852,17 +852,6 @@ module ietf-multicast {
             description
               "The IP address of the neighbor.";
           }
-          leaf vni-type {
-            type identityref {
-              base tunnel-encap-type;
-            }
-            description
-              "The encapsulated type for the multicast flow,
-               it is used to carry the virtual network identifier
-               for the multicast service.
-               When this type is set, the associated vni-value
-               MUST be set.";
-          }
         }
       }
       // downstream
@@ -942,17 +931,6 @@ module ietf-multicast {
             type inet:ip-address;
             description
               "The IP address of the neighbor.";
-          }
-          leaf vni-type {
-            type identityref {
-              base tunnel-encap-type;
-            }
-            description
-              "The encapsulated type for the multicast flow,
-               it is used to carry the virtual network identifier
-               for the multicast service.
-               When this type is set, the associated vni-value
-               MUST be set.";
           }
         }
       }
