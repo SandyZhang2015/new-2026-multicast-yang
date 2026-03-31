@@ -4,8 +4,8 @@
 
 MBONE Deployment                                          SandyZhang2015
 Internet-Draft                                    Your Organization Here
-Intended status: Informational                             30 March 2026
-Expires: 1 October 2026
+Intended status: Informational                             31 March 2026
+Expires: 2 October 2026
 
 
                            TODO - Your title
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 October 2026.
+   This Internet-Draft will expire on 2 October 2026.
 
 Copyright Notice
 
