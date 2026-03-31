@@ -837,8 +837,7 @@ module ietf-multicast {
            protocol and transport protocol used by the multicast
            flow. For different downstream neighbor, different
            signaling and transport technology may be used.";
-        uses signaling-tech;
-        uses transport-tech;
+
         list neighbor {
           key "neighbor-address";
           description
@@ -853,6 +852,8 @@ module ietf-multicast {
               "The IP address of the neighbor.";
           }
         }
+		uses signaling-tech;
+        uses transport-tech;
       }
       // downstream
     }
@@ -917,8 +918,7 @@ module ietf-multicast {
            protocol and transport protocol used by the multicast
            flow. For different downstream neighbor, different
            signaling and transport technology may be used.";
-        uses signaling-tech;
-        uses transport-tech;
+        
         list neighbor {
           key "neighbor-address";
           description
@@ -933,6 +933,8 @@ module ietf-multicast {
               "The IP address of the neighbor.";
           }
         }
+		uses signaling-tech;
+        uses transport-tech;
       }
       // downstream
     }
