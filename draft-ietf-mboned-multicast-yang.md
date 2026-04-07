@@ -1,9 +1,9 @@
 ---
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
-category: info
+title: "Multicast YANG Data Model"
+abbrev: "Multicast YANG Data Model"
+category: std
 
-docname: draft-ietf-mboned-multicast-yang-latest
+docname: draft-ietf-mboned-multicast-yang-model-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
