@@ -27,12 +27,6 @@
         "conformance-type": "import"
       },
       {
-        "name": "ietf-bier",
-        "revision": "",
-        "namespace": "urn:ietf:params:xml:ns:yang:ietf-bier",
-        "conformance-type": "import"
-      },
-      {
         "name": "ietf-multiast",
         "namespace": "urn:ietf:params:xml:ns:yang:ietf-multicast",
         "revision": "",
