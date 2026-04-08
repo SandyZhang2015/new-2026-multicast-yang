@@ -5,11 +5,11 @@ module ietf-inet-types {
   organization
     "IETF Network Modeling (NETMOD) Working Group";
   contact
-    "WG Web:   &lt;https://datatracker.ietf.org/wg/netmod/&gt;
-     WG List:  &lt;mailto:netmod@ietf.org&gt;
+    "WG Web:   <https://datatracker.ietf.org/wg/netmod/>
+     WG List:  <mailto:netmod@ietf.org>
 
      Editor:   Jürgen Schönwälder
-               &lt;mailto:jschoenwaelder@constructor.university&gt;";
+               <mailto:jschoenwaelder@constructor.university>";
   description
     "This module contains a collection of generally useful derived
      YANG data types for Internet addresses and related things.
@@ -145,7 +145,7 @@ module ietf-inet-types {
        SCTP.
 
        Port numbers are assigned by IANA.  The current list of
-       all assignments is available from &lt;https://www.iana.org/&gt;.
+       all assignments is available from <https://www.iana.org/>.
 
        Note that the port number value zero is reserved by IANA.  In
        situations where the value zero does not make sense, it can
@@ -170,7 +170,7 @@ module ietf-inet-types {
        header.
 
        Protocol numbers are assigned by IANA.  The current list of
-       all assignments is available from &lt;https://www.iana.org/&gt;.";
+       all assignments is available from <https://www.iana.org/>.";
     reference
       "RFC  791: Internet Protocol
        RFC 8200: Internet Protocol, Version 6 (IPv6) Specification";
