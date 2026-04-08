@@ -186,7 +186,7 @@ typedef bsl {
     list sub-domain {
       key "sub-domain-id address-family";
       description
-        "The parameters of the BIER subdomain. ";
+        "The parameters of the BIER subdomain.";
           
       leaf sub-domain-id {
         type uint16;
