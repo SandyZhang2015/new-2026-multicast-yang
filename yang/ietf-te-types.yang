@@ -2422,7 +2422,7 @@ module ietf-te-types {
     description
       "Controls PM throttling.";
     container throttle {
-      must 'suppression-interval &gt;= measure-interval' {
+      must 'suppression-interval >= measure-interval' {
         error-message "'suppression-interval' cannot be less than "
                     + "'measure-interval'.";
         description
