@@ -139,6 +139,7 @@
      }
 
      /* Groupings */
+
      grouping address-family {
        description
          "This grouping provides a leaf identifying an address
