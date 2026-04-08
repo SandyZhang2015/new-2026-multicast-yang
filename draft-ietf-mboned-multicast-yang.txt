@@ -4,8 +4,8 @@
 
 MBONE Deployment                                          SandyZhang2015
 Internet-Draft                                    Your Organization Here
-Intended status: Standards Track                            7 April 2026
-Expires: 9 October 2026
+Intended status: Standards Track                            8 April 2026
+Expires: 10 October 2026
 
 
                        Multicast YANG Data Model
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 October 2026.
+   This Internet-Draft will expire on 10 October 2026.
 
 Copyright Notice
 
