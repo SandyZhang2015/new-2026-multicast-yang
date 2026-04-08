@@ -3,6 +3,36 @@
     "module-set-id": "",
     "module": [
       {
+        "name": "ietf-inet-types",
+        "revision": "",
+        "namespace": "urn:ietf:params:xml:ns:yang:ietf-inet-types",
+        "conformance-type": "import"
+      },
+      {
+        "name": "ietf-routing-types",
+        "revision": "",
+        "namespace": "urn:ietf:params:xml:ns:yang:ietf-routing-types",
+        "conformance-type": "import"
+      },
+      {
+        "name": "ietf-routing",
+        "revision": "",
+        "namespace": "urn:ietf:params:xml:ns:yang:ietf-routing",
+        "conformance-type": "import"
+      },
+      {
+        "name": "ietf-te-types",
+        "revision": "",
+        "namespace": "urn:ietf:params:xml:ns:yang:ietf-te-types",
+        "conformance-type": "import"
+      },
+      {
+        "name": "ietf-bier",
+        "revision": "",
+        "namespace": "urn:ietf:params:xml:ns:yang:ietf-bier",
+        "conformance-type": "import"
+      },
+      {
         "name": "ietf-multiast",
         "namespace": "urn:ietf:params:xml:ns:yang:ietf-multicast",
         "revision": "",
