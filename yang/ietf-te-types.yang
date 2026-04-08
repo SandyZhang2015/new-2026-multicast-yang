@@ -2054,6 +2054,7 @@ module ietf-te-types {
       "RFC 3272: Overview and Principles of Internet Traffic
        Engineering";
   }
+
   identity not-optimized {
     base te-optimization-criterion;
     description
