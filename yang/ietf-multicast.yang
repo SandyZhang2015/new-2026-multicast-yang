@@ -24,11 +24,6 @@ module ietf-multicast {
     reference
       "RFC 8776: Common YANG Data Types for Traffic Engineering";
   }
-  import ietf-bier {
-    prefix bier;
-    reference
-      "I-D.ietf-bier-bier-yang: YANG Data Model for BIER Protocol";
-  }
 
   organization
     " IETF MBONED (MBONE Deployment) Working Group";
@@ -228,6 +223,26 @@ module ietf-multicast {
     reference
       "RFC 8926: Geneve: Generic Network Virtualization
         Encapsulation";
+  }
+  
+  identity bier-encapsulation{
+    description
+      "Base identity for BIER encapsulation.";
+  }
+  identity bier-encap-mpls {
+    base bier-encapsulation;
+    description
+      "This identity represents MPLS encapsulation for bier.";
+  }
+  identity bier-encap-ipv6 {
+    base bier-encapsulation;
+    description
+      "This identity represents ipv6 encapsulation for bier.";
+  }
+  identity bier-encap-ethernet {
+    base bier-encapsulation;
+    description
+      "This identity represents ethernet encapsulation for bier.";
   }
 
   identity signaling-pim {
@@ -464,7 +479,7 @@ module ietf-multicast {
     }
     leaf bier-encap-type {
       type identityref {
-        base bier:bier-encapsulation;
+        base bier-encapsulation;
       }
       description
         "The BIER encapsulation that can be used in either MPLS
