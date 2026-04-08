@@ -1,0 +1,13 @@
+module: ietf-routing-types
+
+  grouping mpls-label-stack:
+    +-- mpls-label-stack
+       +-- entry* [id]
+          +-- id               uint8
+          +-- label?           rt-types:mpls-label
+          +-- ttl?             uint8
+          +-- traffic-class?   uint8
+  grouping vpn-route-targets:
+    +-- vpn-target* [route-target]
+       +-- route-target         rt-types:route-target
+       +-- route-target-type    rt-types:route-target-type
