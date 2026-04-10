@@ -3,12 +3,6 @@
     "module-set-id": "",
     "module": [
       {
-        "name": "ietf-inet-types",
-        "revision": "",
-        "namespace": "urn:ietf:params:xml:ns:yang:ietf-inet-types",
-        "conformance-type": "import"
-      },
-      {
         "name": "ietf-routing-types",
         "revision": "",
         "namespace": "urn:ietf:params:xml:ns:yang:ietf-routing-types",
