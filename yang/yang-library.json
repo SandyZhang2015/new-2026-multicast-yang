@@ -31,7 +31,9 @@
         "namespace": "urn:ietf:params:xml:ns:yang:ietf-multicast",
         "revision": "",
         "conformance-type": "implement",
-        "feature": []		  
+        "feature": [
+          "bier"
+        ]		  
       }
     ]
   }
